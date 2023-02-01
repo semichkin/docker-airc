@@ -1,7 +1,7 @@
-FROM cosmtrek/air:latest
+FROM golang:1.19.5-alpine3.17
 
-RUN go install github.com/semichkin-gopkg/airc/cmd/airc@v0.0.2
+RUN go install github.com/semichkin-gopkg/airc/cmd/airc@v0.0.7
 
-ENTRYPOINT []
+ENTRYPOINT ["airc"]
 
-CMD airc build -o /air/.air.toml && air -c /air/.air.toml
+CMD ["build-run", "-c", "/air/.air.toml"]
