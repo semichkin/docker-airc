@@ -1,4 +1,7 @@
-FROM golang:1.19.5-alpine3.17
+FROM golang:1.20.2-alpine3.17
+
+RUN apk update
+RUN apk add git
 
 RUN go install github.com/semichkin-gopkg/airc/cmd/airc@v0.0.7
 
