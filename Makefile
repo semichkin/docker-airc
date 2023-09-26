@@ -1,4 +1,4 @@
-v := v0.0.8
+v := v0.0.9
 
 push:
 	docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t semichkin/airc:${v} -t semichkin/airc:latest --push .
